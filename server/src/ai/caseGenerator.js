@@ -7,7 +7,9 @@ const systemPrompt = `You are the fictional case designer for AI Mystery Room. R
 
 function providerMessage(status, timedOut = false) {
   if (timedOut) return 'Gemini took too long to respond. Please try again.';
-  if (status === 401 || status === 403) return 'Gemini denied access. Check the API key and account permissions.';
+  if (status === 401) return 'Gemini rejected the API key. Check GEMINI_API_KEY in the active server environment and restart the server.';
+  if (status === 403) return 'Gemini blocked this project or key. Check Google AI Studio project status, key restrictions, and billing eligibility.';
+  if (status === 402) return 'Gemini requires billing or an available prepay balance for this project.';
   if (status === 404) return 'The configured Gemini model was not found. Check GEMINI_MODEL.';
   if (status === 429) return 'Gemini rate limit reached. Wait briefly, then try again.';
   if (status >= 400 && status < 500) return 'Gemini rejected the generation request. Check the model and generation settings.';
