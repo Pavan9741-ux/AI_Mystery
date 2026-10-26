@@ -31,4 +31,4 @@ See `.env.example` for all settings. `GEMINI_API_KEY` and MongoDB credentials ar
 - Structured chat evidence and a textual CCTV fallback. No fake video or generated images are claimed.
 - Responsive noir interface with mobile layouts and reduced-motion support.
 
-The canonical requirements are in [docs/SPEC.md](docs/SPEC.md). API routes and data privacy are summarized in [docs/API.md](docs/API.md); local development and deployment notes are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+The canonical requirements are in [docs/SPEC.md](docs/SPEC.md). API routes and data privacy are summarized in [docs/API.md](docs/API.md); local development and deployment notes are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) and the [production deployment walkthrough](docs/DEPLOYMENT.md).

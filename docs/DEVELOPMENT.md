@@ -1,0 +1,13 @@
+# Development
+
+## Local development
+
+Install Node.js 20+, start MongoDB, copy `.env.example` to the repository root as `.env` or into `server/.env`, fill in Gemini credentials, then run `npm install` and `npm run dev`. Server-local `.env` takes precedence. Vite is served on port 5173 and Express on port 5000. The API health route is `/api/v1/health`.
+
+Use `npm run build` for the frontend production bundle, `npm test` for the project tests, and `npm run lint` for static checks. `npm start` starts the API after MongoDB is available.
+
+## Deployment
+
+Follow [the production deployment walkthrough](DEPLOYMENT.md). The included `render.yaml` deploys the built client and API together as one Render web service; MongoDB Atlas stores persistent data. For a separate static frontend, set `VITE_API_URL` at build time to the API base URL ending in `/api/v1`, and set the API's `CLIENT_ORIGIN` to the exact frontend origin.
+
+Media provider support is deliberately absent from this MVP. Chat records render from structured data and CCTV evidence presents text/transcript content only.
