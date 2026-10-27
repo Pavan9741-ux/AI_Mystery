@@ -12,6 +12,7 @@ import { sessionMiddleware } from './middleware/session.js';
 import { AppError, errorHandler } from './utils/errors.js';
 
 export const app = express();
+app.set('trust proxy', 1);
 app.disable('x-powered-by');
 app.use(helmet());
 app.use(cors({ origin: env.clientOrigin.split(',').map((origin) => origin.trim()), methods: ['GET','POST','PATCH','OPTIONS'], allowedHeaders: ['Content-Type','X-Session-Id'] }));
