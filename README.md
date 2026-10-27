@@ -1,3 +1,7 @@
+## 🚀 Live Demo
+
+[Open AI Mystery Room](https://ai-mystery-room-iyci.onrender.com)
+
 # AI Mystery Room
 
 AI Mystery Room turns a short fictional scenario into a private, evidence-driven investigation. The client is a React/Vite app; the Express API validates and stores Gemini-generated cases in MongoDB. The solution stays server-side until an accusation has been filed.
